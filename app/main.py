@@ -10,6 +10,7 @@ from app.db import models
 from app.api.deps import get_current_user
 from sqlalchemy import text
 
+# Initialize all database models
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -18,6 +19,7 @@ app = FastAPI(
     version="1.0.0",
 )
 
+# Add CORS middleware for cross-origin requests
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,

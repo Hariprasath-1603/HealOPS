@@ -52,6 +52,7 @@ app.include_router(
     dependencies=[Depends(get_current_user)]
 )
 
+# Custom OpenAPI schema definition
 def custom_openapi():
     if app.openapi_schema:
         return app.openapi_schema
@@ -84,6 +85,7 @@ def custom_openapi():
     app.openapi_schema = openapi_schema
     return app.openapi_schema
 
+# Assign custom openapi function
 app.openapi = custom_openapi
 
 @app.get("/", tags=["Root"])

@@ -13,6 +13,7 @@ from sqlalchemy import text
 # Initialize all database models
 models.Base.metadata.create_all(bind=engine)
 
+# Main FastAPI application instance
 app = FastAPI(
     title="Healthcare Appointment System",
     description="API for managing healthcare appointments",

@@ -1,4 +1,5 @@
-﻿# Work Division and Contributions
+﻿# Work Division and Contribution
+<!-- Daily streak update -->
 
 This file documents the team members and their responsibilities for the project and for the work included on branch `feat/testing-docs`.
 
